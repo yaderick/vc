@@ -17,10 +17,10 @@
       <el-menu-item v-for = "item in menus" :index="item.id" :key="item.id">
         {{item.title}}
       </el-menu-item>
-      
+
     </el-menu>
     </div>
-    
+
   </div>
 </template>
 
@@ -31,12 +31,10 @@ import { Component, Mixins, Vue } from 'vue-property-decorator';
 import { HeaderMixin } from '../mixins/header_mixin';
 
 @Component
-export default class Header extends Mixins(HeaderMixin){
-  
- handleSelect(routerPath:any, indexPath: any): void{
-   this.$router.push({ path:  routerPath})
-   
- }
+export default class Header extends Mixins(HeaderMixin) {
+  handleSelect(routerPath:any, indexPath: any): void{
+    this.$router.push({ path: routerPath });
+  }
 }
 </script>
 
@@ -55,8 +53,8 @@ export default class Header extends Mixins(HeaderMixin){
       }
     }
     .vc-header-menu{
-      
+
     }
-    
+
   }
 </style>

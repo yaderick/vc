@@ -31,14 +31,16 @@ import Commodity from '@/components/commodity.vue';
 @Component({
   components: {
     SubMenus,
-    Commodity
+    Commodity,
   },
 })
 
 
 export default class Female extends Vue {
   name = 'female'
+
   choice = '男士'
+
   commodity=[
     {
       img_path: require('../assets/3.png'),
@@ -46,13 +48,13 @@ export default class Female extends Vue {
       explain: '好蛋不吃粉',
       price: '188',
     },
-      {
+    {
       img_path: require('../assets/3.png'),
       title: '维纳 . 周 美妆蛋',
       explain: '好蛋不吃粉',
       price: '188',
     },
-      {
+    {
       img_path: require('../assets/3.png'),
       title: '维纳 . 周 美妆蛋',
       explain: '好蛋不吃粉',
@@ -71,7 +73,6 @@ export default class Female extends Vue {
       price: '188',
     },
   ]
-  
 }
 
 </script>
@@ -82,7 +83,7 @@ export default class Female extends Vue {
     width: 100%;
     text-align: left;
     padding-top: 56px;
-   
+
     .commodity-wrapper{
       display: flex;
       flex-direction:row;

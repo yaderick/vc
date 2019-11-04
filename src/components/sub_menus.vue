@@ -17,7 +17,7 @@
 
 
 <script lang="ts">
-import { Component,Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
 
 interface ISbuMenus {
@@ -32,9 +32,8 @@ interface ISbuMenus {
 @Component
 export default class SubMenus extends Vue {
   @Prop() private subMenus!: Array<ISbuMenus>;
+
   @Prop() private choice!: string;
-  
-  
 }
 
 </script>
@@ -46,7 +45,7 @@ export default class SubMenus extends Vue {
     font-weight:400;
     color:rgba(0,0,0,1);
     text-align: left;
-  
+
     .choice{
       font-size:18px;
       font-family:PingFang SC;

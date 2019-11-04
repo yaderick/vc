@@ -8,7 +8,7 @@
 <script lang="ts">
 import { Vue } from 'vue-property-decorator';
 import Component from 'vue-class-component';
-import Header from '@/components/Header.vue'
+import Header from '@/components/Header.vue';
 
 
 @Component({
@@ -17,7 +17,7 @@ import Header from '@/components/Header.vue'
   },
 })
 export default class App extends Vue {
-  
+
 }
 </script>
 

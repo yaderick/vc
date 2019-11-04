@@ -7,8 +7,8 @@
 
          </el-col>
          <el-col :span="16" class="brand-story">
-            <img src="../assets/16.png" alt="" :style="{height:img_height + 'px'}" class="brand-story-left" >
-            <img src="../assets/17.png" alt="" :style="{height:img_height + 'px'}">
+            <img src="../assets/16.png" alt="" :style="{height:img_height + 'px'}" class="brand-story-item" >
+            <img src="../assets/17.png" alt="" :style="{height:img_height + 'px'}" class="brand-story-item">
          </el-col>
          <el-col :span="4">
            
@@ -35,14 +35,14 @@ export default class Female extends Vue {
    img_height : number = 320;
    mounted(){
      this.$nextTick(function () {
-       const img_div = document.getElementsByClassName('brand-story-left')[0]
+       const img_div = document.getElementsByClassName('brand-story-item')[0]
        const height = (<HTMLIFrameElement> img_div).width
        this.img_height = Number(height) * .83
       this.resizeImg()
     })
   }
   resizeImg(){
-    window.addEventListener("resize",() => this.img_height = Number((<HTMLIFrameElement>document.getElementsByClassName('brand-story-left')[0]).width));
+    window.addEventListener("resize",() => this.img_height = Number((<HTMLIFrameElement>document.getElementsByClassName('brand-story-item')[0]).width) * .7);
   }
 }
 
@@ -58,7 +58,7 @@ export default class Female extends Vue {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    .brand-story-left{
+    .brand-story-item{
       width: 45%;
     }
   }

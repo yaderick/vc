@@ -1,6 +1,6 @@
 <template>
   <div class="vc-footer">
-    <div> 
+    <div>
       <p class="logo">V E R N A  <span style="display:inline-block; width:20px"></span>   C H O W</p>
       <div class="icons">
         <el-row :gutter="0">
@@ -17,7 +17,7 @@
          <el-col :span="4">
         </el-col>
       </el-row>
-        
+
       </div>
       <p class="line"></p>
       <div >
@@ -43,16 +43,16 @@
               <p class="p-explain">  扫描并关注二维码</p>
               <p class="p-explain"> 获得维纳周最新优惠消息</p>
            </div>
-           
+
         </div>
         </el-col>
          <el-col :span="4">
         </el-col>
       </el-row>
-        
-        
+
+
       </div>
-      
+
     </div>
   </div>
 </template>
@@ -63,27 +63,27 @@ import { Component, Mixins, Vue } from 'vue-property-decorator';
 
 
 @Component
-export default class Header extends Vue{
+export default class Header extends Vue {
   icons = [
     {
       img_path: require('../assets/9.png'),
       title: '正品保障',
-      explain: '维纳.周总部直供'
+      explain: '维纳.周总部直供',
     },
     {
       img_path: require('../assets/10.png'),
       title: '正品保障',
-      explain: '运输速度快'
+      explain: '运输速度快',
     },
     {
       img_path: require('../assets/11.png'),
       title: '正品保障',
-      explain: '为您解答护肤专业问题'
+      explain: '为您解答护肤专业问题',
     },
     {
       img_path: require('../assets/12.png'),
       title: '正品保障',
-      explain: '享受奢宠购物体验'
+      explain: '享受奢宠购物体验',
     },
   ]
 }
@@ -110,9 +110,9 @@ export default class Header extends Vue{
       .footer-icons{
         display: flex;
       flex-direction:row;
-      justify-content:  space-between; 
+      justify-content:  space-between;
       }
-       
+
       .p-title{
         margin-top: 25px;
         font-size:18px;
@@ -136,7 +136,7 @@ export default class Header extends Vue{
       text-align: left;
        display: flex;
       flex-direction:row;
-      justify-content:  space-between; 
+      justify-content:  space-between;
       margin-top: 65px;
       .p-title{
         margin-top: 25px;
@@ -161,6 +161,6 @@ export default class Header extends Vue{
           height: 86px;
        }
     }
-   
+
   }
 </style>
