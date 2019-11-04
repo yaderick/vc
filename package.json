@@ -1,0 +1,74 @@
+{
+  "name": "verna_chow_web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run serve",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@types/jquery": "^3.3.31",
+    "core-js": "^3.1.2",
+    "element-ui": "^2.12.0",
+    "less": "^3.10.3",
+    "normalize.css": "^8.0.1",
+    "register-service-worker": "^1.6.2",
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.0.2",
+    "vue-property-decorator": "^8.1.0",
+    "vue-router": "^3.0.6",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-eslint": "^4.0.0",
+    "@vue/cli-plugin-pwa": "^4.0.0",
+    "@vue/cli-plugin-typescript": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "@vue/eslint-config-typescript": "^4.0.0",
+    "babel-plugin-component": "^1.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "less-loader": "^5.0.0",
+    "lint-staged": "^9.4.2",
+    "typescript": "~3.5.3",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/airbnb",
+      "@vue/typescript"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "@typescript-eslint/parser"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue,ts}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}
