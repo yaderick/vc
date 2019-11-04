@@ -9,6 +9,57 @@
          <el-col :span="16" class="brand-story">
             <img src="../assets/16.png" alt="" :style="{height:img_height + 'px'}" class="brand-story-item" >
             <img src="../assets/17.png" alt="" :style="{height:img_height + 'px'}" class="brand-story-item">
+             <div class="culture-btn">
+
+        </div>
+         </el-col>
+         <el-col :span="4">
+           
+         </el-col>
+        </el-row >
+       
+    </div>
+    <div>
+       <el-row :gutter="0">
+         <el-col :span="4">
+
+         </el-col>
+         <el-col :span="16">
+            <img src="../assets/18.png" alt="" style="width:100%">
+           
+         </el-col>
+         <el-col :span="4">
+           
+         </el-col>
+        </el-row >
+    </div>
+     <div>
+       <el-row :gutter="0">
+         <el-col :span="4">
+
+         </el-col>
+         <el-col :span="16" class="brand-concept">
+             <el-row :gutter="20">
+             <el-col :span="14">
+                 <img src="../assets/19.png" alt="" :style="{height:img_height + 'px'}" class="brand-concept-item" >
+             </el-col>
+             <el-col :span="10">
+                  <img src="../assets/20.png" alt="" :style="{height:img_height + 'px'}" class="brand-concept-item">
+             </el-col>
+             </el-row >
+         </el-col>
+         <el-col :span="4">
+           
+         </el-col>
+        </el-row >
+    </div>
+    <div>
+       <el-row :gutter="0">
+         <el-col :span="4">
+
+         </el-col>
+         <el-col :span="16" class="brand-vision">
+              <img src="../assets/21.png" alt="" :style="{height:img_height + 'px'}" style="width:100%">
          </el-col>
          <el-col :span="4">
            
@@ -51,23 +102,33 @@ export default class Female extends Vue {
 
 <style lang="less" scoped>
 .culture{
-  position: relative;
   .brand-story{
     margin-top: 143px;
     margin-bottom: 177px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: relative;
     .brand-story-item{
       width: 45%;
     }
-  }
-  .culture-btn{
+    .culture-btn{
     position: absolute;
-    // top: 1096px;
     background: red;
     width:100px;
     height: 100px;
   }
+  }
+  .brand-concept{
+    margin-top: 204px;
+    margin-bottom: 143px;
+    .brand-concept-item{
+      width: 100%;
+    }
+  }
+  .brand-vision{
+    margin-bottom: 260px;
+  }
+  
 }
 </style>
