@@ -7,11 +7,14 @@
 
          </el-col>
          <el-col :span="16" class="brand-story">
-            <img src="../assets/16.png" alt="" :style="{height:img_height + 'px'}" class="brand-story-item" >
+            <div  class="brand-story-item">
+              <img src="../assets/16.png" alt="" :style="{height:img_height + 'px'}" style="width:100%">
+              <div class="culture-btn">
+                <img src="../assets/22..png" alt="" style="width:100%; height:100%">
+              </div>
+            </div>
             <img src="../assets/17.png" alt="" :style="{height:img_height + 'px'}" class="brand-story-item">
-             <div class="culture-btn">
-
-        </div>
+             
          </el-col>
          <el-col :span="4">
            
@@ -114,9 +117,11 @@ export default class Female extends Vue {
     }
     .culture-btn{
     position: absolute;
-    background: red;
     width:100px;
     height: 100px;
+    right: 0px;
+    top: 0px;
+    cursor: pointer;
   }
   }
   .brand-concept{
