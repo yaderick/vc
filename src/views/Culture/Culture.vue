@@ -1,6 +1,6 @@
 <template>
   <div class="culture">
-    <img src="../assets/15.png" alt="" style="width:100%"/>
+    <img src="../../assets/15.png" alt="" style="width:100%"/>
     <div>
        <el-row :gutter="0">
          <el-col :span="4">
@@ -8,12 +8,12 @@
          </el-col>
          <el-col :span="16" class="brand-story">
             <div  class="brand-story-item">
-              <img src="../assets/16.png" alt="" :style="{height:img_height + 'px'}" style="width:100%">
+              <img src="../../assets/16.png" alt="" :style="{height:img_height + 'px'}" style="width:100%">
               <div class="culture-btn">
-                <img src="../assets/22..png" alt="" style="width:100%; height:100%">
+                <img src="../../assets/22..png" alt="" style="width:100%; height:100%" @click="tohistory()">
               </div>
             </div>
-            <img src="../assets/17.png" alt="" :style="{height:img_height + 'px'}" class="brand-story-item">
+            <img src="../../assets/17.png" alt="" :style="{height:img_height + 'px'}" class="brand-story-item" >
              
          </el-col>
          <el-col :span="4">
@@ -28,7 +28,7 @@
 
          </el-col>
          <el-col :span="16">
-            <img src="../assets/18.png" alt="" style="width:100%">
+            <img src="../../assets/18.png" alt="" style="width:100%">
            
          </el-col>
          <el-col :span="4">
@@ -44,10 +44,10 @@
          <el-col :span="16" class="brand-concept">
              <el-row :gutter="20">
              <el-col :span="14">
-                 <img src="../assets/19.png" alt="" :style="{height:img_height + 'px'}" class="brand-concept-item" >
+                 <img src="../../assets/19.png" alt="" :style="{height:img_height + 'px'}" class="brand-concept-item" >
              </el-col>
              <el-col :span="10">
-                  <img src="../assets/20.png" alt="" :style="{height:img_height + 'px'}" class="brand-concept-item">
+                  <img src="../../assets/20.png" alt="" :style="{height:img_height + 'px'}" class="brand-concept-item">
              </el-col>
              </el-row >
          </el-col>
@@ -62,7 +62,7 @@
 
          </el-col>
          <el-col :span="16" class="brand-vision">
-              <img src="../assets/21.png" alt="" :style="{height:img_height + 'px'}" style="width:100%">
+              <img src="../../assets/21.png" alt="" :style="{height:img_height + 'px'}" style="width:100%">
          </el-col>
          <el-col :span="4">
            
@@ -97,6 +97,9 @@ export default class Female extends Vue {
   }
   resizeImg(){
     window.addEventListener("resize",() => this.img_height = Number((<HTMLIFrameElement>document.getElementsByClassName('brand-story-item')[0]).width) * .7);
+  }
+  tohistory(){
+    this.$router.push('culture/history')
   }
 }
 

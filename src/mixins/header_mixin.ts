@@ -1,11 +1,10 @@
 
 import { Component, Mixins, Vue } from 'vue-property-decorator';
 
-interface Iheader {
-  id: number | string,
-  title: string
+interface Iheader{
+  id: RegExp | string;
+  title: string;
 }
-
 /**
  * mixins 必须先用 Component 修饰
  * https://www.jianshu.com/p/d8ed3aa76e9b 说明很好
@@ -20,35 +19,35 @@ export class HeaderMixin extends Vue {
      title: '首页',
    },
    {
-     id: 'female',
+     id: '/female',
      title: '女士',
    },
    {
-     id: 'male',
+     id: '/male',
      title: '男士',
    },
    {
-     id: 'gift',
+     id: '/gift',
      title: '礼品套盒',
    },
    {
-     id: 'tools',
+     id: '/tools',
      title: '美妆工具',
    },
    {
-     id: 'clothing',
+     id: '/clothing',
      title: '服装',
    },
    {
-     id: 'show',
+     id: '/show',
      title: '秀场',
    },
    {
-     id: 'culture',
+     id: '/culture',
      title: '企业文化',
    },
    {
-     id: 'cooperation',
+     id: '/cooperation',
      title: '跨境合作',
    },
  ]

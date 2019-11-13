@@ -91,6 +91,7 @@ export default class Header extends Vue {
 
 <style lang="less" scoped>
   .vc-footer{
+    text-align:center;
     p{
       margin: 0;
       padding: 0;

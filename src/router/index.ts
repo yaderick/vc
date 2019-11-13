@@ -19,37 +19,51 @@ const routes = [
   {
     path: '/male',
     name: 'male',
-    component: () => import(/* webpackChunkName: "female" */ '../views/Male.vue'),
+    component: () => import(/* webpackChunkName: "male" */ '../views/Male.vue'),
   },
   {
     path: '/gift',
     name: 'gift',
-    component: () => import(/* webpackChunkName: "female" */ '../views/Gift.vue'),
+    component: () => import(/* webpackChunkName: "gift" */ '../views/Gift.vue'),
   },
   {
     path: '/tools',
     name: 'tools',
-    component: () => import(/* webpackChunkName: "female" */ '../views/Tools.vue'),
+    component: () => import(/* webpackChunkName: "tools" */ '../views/Tools.vue'),
   },
   {
     path: '/clothing',
     name: 'clothing',
-    component: () => import(/* webpackChunkName: "female" */ '../views/Clothing.vue'),
+    component: () => import(/* webpackChunkName: "clothing" */ '../views/Clothing.vue'),
   },
   {
     path: '/show',
     name: 'show',
-    component: () => import(/* webpackChunkName: "female" */ '../views/Show.vue'),
+    component: () => import(/* webpackChunkName: "show" */ '../views/Show.vue'),
   },
   {
     path: '/cooperation',
     name: 'cooperation',
-    component: () => import(/* webpackChunkName: "female" */ '../views/Cooperation.vue'),
+    component: () => import(/* webpackChunkName: "cooperation" */ '../views/Cooperation.vue'),
   },
   {
     path: '/culture',
     name: 'culture',
-    component: () => import(/* webpackChunkName: "female" */ '../views/Culture.vue'),
+    redirect: { name: 'default' },
+    component: () => import(/* webpackChunkName: "cooperation" */ '../views/Culture/index.vue'),
+    children: [
+      {
+        path: '/default',
+        name: 'default',
+        component: () => import(/* webpackChunkName: "culture" */ '../views/Culture/Culture.vue'),
+      },
+      {
+        // 当 /user/:id/profile 匹配成功，
+        // UserProfile 会被渲染在 User 的 <router-view> 中
+        path: 'history',
+        component: () => import(/* webpackChunkName: "history" */ '../views/Culture/History.vue'),
+      },
+    ]
   },
 ];
 
