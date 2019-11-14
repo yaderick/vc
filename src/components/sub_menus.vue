@@ -7,10 +7,9 @@
     </div>
     <ul>
       <li class="classification">详细分类</li>
-      <li class="gap">全部</li>
-      <li class="gap">护肤品</li>
-      <li class="gap">底妆</li>
-      <li class="gap">香氛</li>
+      <li  v-for="(item, index ) in classification" :key="index" class="gap" @click="handleClick(item)">
+        {{item.name}}
+      </li>
     </ul>
   </div>
 </template>
@@ -28,12 +27,23 @@ interface ISbuMenus {
   price: number,
 }
 
+interface Iclassification {
+  id: string,
+  name: string,
+}
+
 
 @Component
 export default class SubMenus extends Vue {
   @Prop() private subMenus!: Array<ISbuMenus>;
 
   @Prop() private choice!: string;
+
+  @Prop() private classification!: Array<Iclassification>;
+
+  handleClick(item: Iclassification){
+    this.$router.push(item.id)
+  }
 }
 
 </script>

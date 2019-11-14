@@ -14,7 +14,22 @@ const routes = [
   {
     path: '/female',
     name: 'female',
-    component: () => import(/* webpackChunkName: "female" */ '../views/Female.vue'),
+    redirect: { name: 'female-all' },
+    component: () => import(/* webpackChunkName: "female" */ '../views/Female/index.vue'),
+    children: [
+      {
+        path: '/female-all',
+        name: 'female-all',
+        component: () => import(/* webpackChunkName: "culture" */ '../views/Female/Female.vue'),
+      },
+      {
+        // 当 /user/:id/profile 匹配成功，
+        // UserProfile 会被渲染在 User 的 <router-view> 中
+        path: '/skin',
+        name: 'skin',
+        component: () => import(/* webpackChunkName: "history" */ '../views/Female/Skin.vue'),
+      },
+    ]
   },
   {
     path: '/male',
