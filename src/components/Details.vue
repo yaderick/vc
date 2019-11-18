@@ -7,7 +7,7 @@
       <el-col :span="16" class="details-header">
         <div class="swiper-container gallery-side">
           <div class="swiper-wrapper">
-            
+            啊哈哈
           </div>
            <div class="swiper-container gallery-thumbs">
            

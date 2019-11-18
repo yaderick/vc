@@ -94,7 +94,7 @@ const routes = [
     ]
   },
   {
-    path: "/details/:goodId",
+    path: "/details",
     name: "Details",
     component: () => import(/* webpackChunkName: "history" */ '../components/Details.vue')
   }

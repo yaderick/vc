@@ -38,7 +38,12 @@ export default class Commodity extends Vue {
   }
   
   detailPro(commodity:any){
-    debugger
+    this.$router.push(
+      {
+          path: 'details',
+          query:commodity
+      }
+    )
   }
   
 }
