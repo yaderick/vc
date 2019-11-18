@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
-import Female from '../views/Female.vue';
 
 Vue.use(VueRouter);
 
@@ -18,16 +17,30 @@ const routes = [
     component: () => import(/* webpackChunkName: "female" */ '../views/Female/index.vue'),
     children: [
       {
-        path: '/female-all',
+        path: '/female/female-all',
         name: 'female-all',
         component: () => import(/* webpackChunkName: "culture" */ '../views/Female/Female.vue'),
       },
       {
         // 当 /user/:id/profile 匹配成功，
         // UserProfile 会被渲染在 User 的 <router-view> 中
-        path: '/skin',
+        path: '/female/skin',
         name: 'skin',
         component: () => import(/* webpackChunkName: "history" */ '../views/Female/Skin.vue'),
+      },
+      {
+        // 当 /user/:id/profile 匹配成功，
+        // UserProfile 会被渲染在 User 的 <router-view> 中
+        path: '/female/makeup',
+        name: 'makeup',
+        component: () => import(/* webpackChunkName: "history" */ '../views/Female/Makeup.vue'),
+      },
+      {
+        // 当 /user/:id/profile 匹配成功，
+        // UserProfile 会被渲染在 User 的 <router-view> 中
+        path: '/female/fragrance',
+        name: 'makeup',
+        component: () => import(/* webpackChunkName: "history" */ '../views/Female/Fragrance.vue'),
       },
     ]
   },
@@ -80,6 +93,11 @@ const routes = [
       },
     ]
   },
+  {
+    path: "/details/:goodId",
+    name: "Details",
+    component: () => import(/* webpackChunkName: "history" */ '../components/Details.vue')
+  }
 ];
 
 const router = new VueRouter({

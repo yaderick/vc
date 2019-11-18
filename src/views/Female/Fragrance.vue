@@ -1,6 +1,6 @@
 <template>
   <div class="commodity-wrapper">
-     <Commodity v-for = "item in commodity" :commodity= "item" :key="item" />
+     <Commodity v-for = "item in commodity" :commodity= "item" :key="item"/>
   </div>
 </template>
 
@@ -9,7 +9,6 @@ import { Component, Vue } from 'vue-property-decorator';
 import Commodity from '@/components/commodity.vue';
 import Data from '@/config/mock.js'
 
-
 @Component({
   components: {
     Commodity,
@@ -17,8 +16,8 @@ import Data from '@/config/mock.js'
 })
 
 
-export default class Female extends Vue {
- commodity = Data['products']['female']['all'] 
+export default class Skin extends Vue {
+  commodity = Data['products']['female']['fragrance'] 
 }
 
 </script>

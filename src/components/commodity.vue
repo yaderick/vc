@@ -1,5 +1,5 @@
 <template>
-  <div class="commodity">
+  <div class="commodity" @click="detailPro(commodity)">
       <p>
         <img :src="commodity.img_path" alt="" class="p-img" :style="{height: img_height + 'px'}">
       </p>
@@ -37,6 +37,9 @@ export default class Commodity extends Vue {
     window.addEventListener("resize",() => this.img_height = Number((<HTMLIFrameElement>document.getElementsByClassName('p-img')[0]).width) );
   }
   
+  detailPro(commodity:any){
+    debugger
+  }
   
 }
 
@@ -44,12 +47,14 @@ export default class Commodity extends Vue {
 
 <style lang="less" scoped>
   .commodity{
-    width: 33%;
+    flex: 0 0 31%;
+    margin-right: 10px;
     display: flex;
     flex-direction:column;
     justify-content:  center; 
     align-items: center;
-     margin-bottom: 40px;
+    margin-bottom: 40px;
+    cursor: pointer;
     .p-img{
       width:100%;
       height: 320px;

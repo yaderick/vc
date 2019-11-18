@@ -7,7 +7,7 @@
     </div>
     <ul>
       <li class="classification">详细分类</li>
-      <li  v-for="(item, index ) in classification" :key="index" class="gap" @click="handleClick(item)">
+      <li  v-for="(item, index ) in classification" :key="index" class="gap" @click="handleClick(item,index)" :class="index == currentItem ? 'active' : ''">
         {{item.name}}
       </li>
     </ul>
@@ -40,8 +40,9 @@ export default class SubMenus extends Vue {
   @Prop() private choice!: string;
 
   @Prop() private classification!: Array<Iclassification>;
-
-  handleClick(item: Iclassification){
+  currentItem = 0;
+  handleClick(item: Iclassification, index: number){
+    this.currentItem = index;
     this.$router.push(item.id)
   }
 }
@@ -78,10 +79,17 @@ export default class SubMenus extends Vue {
       font-family:PingFang SC;
       font-weight:400;
       color:rgba(155,155,155,1);
+      margin-bottom: 10px;
     }
     .gap{
-      margin-top: 20px;
+      height: 34px;
+      line-height: 34px;
       cursor: pointer;
+    }
+    .active{
+      width:113px;
+      color: #fff;
+      background: #000;
     }
   }
 </style>

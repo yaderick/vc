@@ -41,7 +41,7 @@ export default class Index extends Vue {
 
   classification = [
     {
-      id:'/female-all',
+      id:'/female/female-all',
       name: '全部'
     },
      {
@@ -49,11 +49,11 @@ export default class Index extends Vue {
       name: '护肤品'
     },
      {
-      id:'',
+      id:'/female/makeup',
       name: '底妆'
     },
      {
-      id:'',
+      id:'/female/fragrance',
       name: '香氛'
     }
   ]

@@ -88,7 +88,7 @@ export default class Female extends Vue {
       display: flex;
       flex-direction:row;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: center;
     }
   }
 </style>

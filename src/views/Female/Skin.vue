@@ -7,6 +7,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import Commodity from '@/components/commodity.vue';
+import Data from '@/config/mock.js'
 
 @Component({
   components: {
@@ -16,15 +17,7 @@ import Commodity from '@/components/commodity.vue';
 
 
 export default class Skin extends Vue {
- commodity=[
-      {
-        img_path: require('../../assets/3.png'),
-        title: '维纳 . 周 美妆蛋',
-        explain: '好蛋不吃粉',
-        price: '188',
-      },
-      
-    ]
+   commodity = Data['products']['female']['skin'] 
 }
 
 </script>
@@ -34,6 +27,5 @@ export default class Skin extends Vue {
       display: flex;
       flex-direction:row;
       flex-wrap: wrap;
-      justify-content: space-between;
     }
 </style>
