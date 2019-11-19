@@ -40,8 +40,7 @@ export default class Commodity extends Vue {
   detailPro(commodity:any){
     this.$router.push(
       {
-          path: 'details',
-          query:commodity
+         name: 'Details', params: commodity
       }
     )
   }

@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
+import Details from '../components/Details.vue'
 
 Vue.use(VueRouter);
 
@@ -39,7 +40,7 @@ const routes = [
         // 当 /user/:id/profile 匹配成功，
         // UserProfile 会被渲染在 User 的 <router-view> 中
         path: '/female/fragrance',
-        name: 'makeup',
+        name: 'fragrance',
         component: () => import(/* webpackChunkName: "history" */ '../views/Female/Fragrance.vue'),
       },
     ]
@@ -96,7 +97,7 @@ const routes = [
   {
     path: "/details",
     name: "Details",
-    component: () => import(/* webpackChunkName: "history" */ '../components/Details.vue')
+    component: Details
   }
 ];
 

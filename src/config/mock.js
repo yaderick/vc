@@ -5,8 +5,28 @@ export default {
         { 
           img_path: require('../assets/3.png'),
           title: '维纳 . 周 美妆蛋',
+          en_title: 'AAAAAAAAAAAAAAAAAAAAAAAAA',
+          star: '★★★★★',
+          info: '双方都角色了会计法雷克萨交付了康师傅 阿双方均按实际发生就发',
           explain: '好蛋不吃粉',
-          price: '188',
+          price: '￥188',
+          weight: '50g ',
+          target: 'https://www.baidu.com',
+          imgs:[
+            {
+              url: require('../assets/1.png')
+            },
+            {
+              url: require('../assets/2.png')
+            },
+            {
+              url: require('../assets/3.png')
+            },
+            {
+              url: require('../assets/4.png')
+            },
+          ],
+          bag_img: require('../assets/5.png')
         },
         {
           img_path: require('../assets/3.png'),
