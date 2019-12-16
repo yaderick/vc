@@ -1,4 +1,4 @@
-<template>
+`<template>
   <div class="single-product">
     <div v-for=" item in products" :key="item.id" style="width:30%">
       <p >
